@@ -1,4 +1,3 @@
-
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/context/AuthContext";
@@ -15,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-   title: "Event Management System",
+  title: "Event Management System",
   description: "Manage your events with ease",
 };
 
@@ -25,10 +24,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-       <AuthProvider>
-        <AppLayout>
-            {children}
-          </AppLayout>
+        <AuthProvider>
+          <AppLayout>{children}</AppLayout>
         </AuthProvider>
       </body>
     </html>

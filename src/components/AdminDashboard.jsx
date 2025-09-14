@@ -48,22 +48,22 @@ function UserManagement() {
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md mt-8">
-      <h2 className="text-2xl font-semibold mb-4">User Management</h2>
+      <h2 className="text-2xl font-semibold mb-4 text-black">User Management</h2>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white">
           <thead className="bg-gray-200">
             <tr>
-              <th className="py-2 px-4 border-b text-left">Name</th>
-              <th className="py-2 px-4 border-b text-left">Email</th>
-              <th className="py-2 px-4 border-b text-center">Role</th>
-              <th className="py-2 px-4 border-b text-center">Actions</th>
+              <th className="py-2 px-4 border-b text-left text-black">Name</th>
+              <th className="py-2 px-4 border-b text-left text-black">Email</th>
+              <th className="py-2 px-4 border-b text-center text-black">Role</th>
+              <th className="py-2 px-4 border-b text-center text-black">Actions</th>
             </tr>
           </thead>
           <tbody>
             {users.map((user) => (
               <tr key={user.id}>
-                <td className="py-2 px-4 border-b">{user.name}</td>
-                <td className="py-2 px-4 border-b">{user.email}</td>
+                <td className="py-2 px-4 border-b text-black">{user.name}</td>
+                <td className="py-2 px-4 border-b text-black">{user.email}</td>
                 <td className="py-2 px-4 border-b text-center">
                   <span className={`px-2 py-1 text-xs font-semibold rounded-full ${user.role === 'admin' ? 'bg-green-200 text-green-800' : 'bg-yellow-200 text-yellow-800'}`}>
                     {user.role}

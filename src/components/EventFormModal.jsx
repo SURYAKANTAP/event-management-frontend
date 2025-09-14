@@ -41,30 +41,30 @@ export default function EventFormModal({ event, onClose, onSave }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-lg">
-        <h2 className="text-2xl font-bold mb-4">{event ? 'Edit Event' : 'Add New Event'}</h2>
+        <h2 className="text-2xl font-bold mb-4 text-black">{event ? 'Edit Event' : 'Add New Event'}</h2>
         {/* Note: The form no longer has its own onSubmit */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <input name="title" value={formData.title} onChange={handleChange} placeholder="Title" required className="w-full p-2 border rounded"/>
-          <textarea name="description" value={formData.description} onChange={handleChange} placeholder="Description" required className="w-full p-2 border rounded"/>
-          <input name="date" type="date" value={formData.date} onChange={handleChange} required className="w-full p-2 border rounded"/>
-          <input name="time" type="time" value={formData.time} onChange={handleChange} required className="w-full p-2 border rounded"/>
+          <input name="title" value={formData.title} onChange={handleChange} placeholder="Title" required className="w-full p-2 border rounded text-black"/>
+          <textarea name="description" value={formData.description} onChange={handleChange} placeholder="Description" required className="w-full p-2 border rounded text-black"/>
+          <input name="date" type="date" value={formData.date} onChange={handleChange} required className="w-full p-2 border rounded text-black"/>
+          <input name="time" type="time" value={formData.time} onChange={handleChange} required className="w-full p-2 border rounded text-black"/>
           
           {/* 4. Change the text input to a file input */}
           <div>
-            <label htmlFor="image" className="block text-sm font-medium text-gray-700">Event Image</label>
+            <label htmlFor="image" className="block text-sm font-medium text-black">Event Image</label>
             <input 
               id="image" 
               name="image" 
               type="file" 
               onChange={handleFileChange} 
-              className="w-full p-2 border rounded"
+              className="w-full p-2 border rounded text-black"
             />
           </div>
           
           <div className="flex justify-end space-x-4 mt-6">
-            <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
+            <button type="button" onClick={onClose} className="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400 text-black">Cancel</button>
             <button type="submit" className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Save</button>
           </div>
         </form>
